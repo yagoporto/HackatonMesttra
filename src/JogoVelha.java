@@ -53,6 +53,10 @@ public class JogoVelha {
             }
         } while (jogoContinua);
 
+        
+        System.out.println("Pressione Enter para finalizar...");
+        teclado.nextLine();
+
         teclado.close();
     }
 }

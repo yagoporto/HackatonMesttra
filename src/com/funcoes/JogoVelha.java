@@ -1,11 +1,11 @@
+package com.funcoes;
 import java.util.Scanner;
-import com.funcoes.*;
 
 public class JogoVelha {
     final static String CARACTERES_IDENTIFICADORES_ACEITOS = "XO0UC";
     final static int TAMANHO_TABULEIRO = 3;
 
-    public static void main(String[] args) {
+    public static void jogo() {
         Scanner teclado = new Scanner(System.in);
 
         char[][] tabuleiro = Tabuleiro.inicializarTabuleiro(new char[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]);
@@ -24,6 +24,7 @@ public class JogoVelha {
             jogoContinua = true;
             Processar.limparTela();
 
+            JogoDaVelhaMenu.nome();
             Tabuleiro.exibirTabuleiro(tabuleiro);
 
             if (vezUsuarioJogar) {
@@ -56,8 +57,6 @@ public class JogoVelha {
         
         System.out.println("Pressione Enter para finalizar...");
         teclado.nextLine();
-
-        teclado.close();
     }
 }
 
